@@ -6,6 +6,7 @@ import Highlighter from 'react-highlight-words';
 import { Button, Input, Space, Table } from 'antd';
 import styled from "styled-components";
 import moment from 'moment';
+import { useNavigate } from "react-router-dom";
 
 const data = [
     {
@@ -14,7 +15,7 @@ const data = [
       status: 'Process',
       date: '22/12/2023',
       detail: (<>
-        <Link to={`/detail`}><button>Detail</button></Link>
+        <Link to={`/pile/1`}><button>Detail</button></Link>
         </>
         )
     },
@@ -24,7 +25,8 @@ const data = [
       status: 'Done',
       date: '23/12/2023',
       detail: (<>
-        <Link to={`/detail`}><button>Detail</button></Link>
+        
+        <Link to={`/pile/2`}><button>Detail</button></Link>
         </>
         )
     },
@@ -136,6 +138,7 @@ const data = [
         text
       ),
   });
+  const navigate = useNavigate();
   const columns = [
     {
       title: 'No.',
@@ -175,7 +178,16 @@ const data = [
   ];
       return (<Wrapper>
 
-        <Table columns={columns} dataSource={data} />
+        <Table 
+        columns={columns} 
+        dataSource={data} 
+        onRow={(record) => {
+            return {
+              onClick: () => {
+                navigate(`/${record.no}/pile`);
+              },
+            };
+          }}/>
         </Wrapper>
       );
     };

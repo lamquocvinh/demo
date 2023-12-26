@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-// import DetailProject from "./";
+import Pile from "./pages/pile";
 import './App.css';
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        {/* <Route path="/detail/:id" element={<DetailProject />}></Route> */}
+        <Route path="/:no/pile" element={<Pile />}></Route>
       </Routes>
     </BrowserRouter>
   )
