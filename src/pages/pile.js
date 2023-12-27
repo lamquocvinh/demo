@@ -202,6 +202,7 @@ const Intern = () => {
                     },
                 };
             }}
+            style={{ margin: '100px', border: '1px solid #000', borderRadius: '10px' }}
         />
     </Wrapper>
     );

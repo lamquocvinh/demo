@@ -15,7 +15,7 @@ const data = [
       status: 'Process',
       date: '22/12/2023',
       detail: (<>
-        <Link to={`/pile/1`}><button>Detail</button></Link>
+        <Link to={`/1/pile`}><button>Detail</button></Link>
         </>
         )
     },
@@ -26,7 +26,7 @@ const data = [
       date: '23/12/2023',
       detail: (<>
         
-        <Link to={`/pile/2`}><button>Detail</button></Link>
+        <Link to={`/2/pile`}><button>Detail</button></Link>
         </>
         )
     },
@@ -187,7 +187,9 @@ const data = [
                 navigate(`/${record.no}/pile`);
               },
             };
-          }}/>
+          }}
+          style={{ margin: '100px', border: '1px solid #000', borderRadius: '10px' }}
+          />
         </Wrapper>
       );
     };
