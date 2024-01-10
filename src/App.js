@@ -1,4 +1,4 @@
-import Home from "./pages/Home";
+import Home from "./pages/test";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Pile from "./pages/pile";
 import './App.css';
