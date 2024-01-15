@@ -9,7 +9,6 @@ let canvas;
 
   const handleCursorMovement = (e) => {
 
-     const canvas = e.currentTarget;
      const rect = e.target.getBoundingClientRect();
      setMouseCoords({
        x: e.clientX - rect.left ,
