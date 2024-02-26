@@ -1,0 +1,105 @@
+/* CSS chung cho cả điện thoại và máy tính */
+.container {
+    padding: 24px 36px;
+    border-radius: 6px;
+    margin-bottom: 48px;
+    width: 100%;
+  }
+  
+  /* CSS cho điện thoại di động */
+  @media (max-width: 360px) {
+    .scroll {
+        overflow-y: auto;
+        z-index: 1;
+        position: relative;
+        max-height: 150px;
+      }
+      
+      body {
+        overflow-y: scroll; /* Cho phép cuộn dọc trên toàn bộ trang */
+        max-height: 740px; /* Giới hạn chiều dài của trang để xuất hiện thanh cuộn */
+      }
+      .container {
+        padding: 16px;
+      }
+    
+      .form-container {
+        margin-bottom: 16px;
+        position: relative; /* Đặt vị trí tương đối */
+      }
+    
+      .ant-form-item-label {
+        width: 100%;
+      }
+    
+      .ant-row {
+        margin-bottom: 8px;
+      }
+    
+      .ant-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    
+      .ant-btn {
+        font-size: 12px;
+        height: 30px;
+        width: 80px;
+        justify-content: center;
+      }
+    
+      .ant-table {
+        overflow-x: auto; /* Cho phép cuộn ngang nếu bảng quá rộng */
+      }
+    
+      .ant-table-title {
+        position: sticky;
+        top: 0;
+        background: #fff; /* Màu nền để giữ nó trên cùng khi cuộn */
+        z-index: 1; /* Đảm bảo nó hiển thị trên cùng của bảng */
+      }
+  }
+  
+  /* CSS cho máy tính */
+  @media (min-width: 768px) {
+    .container {
+      width: 70%; /* Đặt chiều rộng cho máy tính */
+      margin: 0 auto; 
+    }
+  }
+  
+  /* CSS cho nút "New" */
+  .button-new {
+    background: #6366f1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* CSS cho phần tìm kiếm */
+  .search-section {
+    transition: height 500ms ease-in-out;
+    height: 40px;
+    overflow: hidden;
+  }
+  
+  /* CSS cho form tìm kiếm */
+  .search-form {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  /* CSS cho bảng dữ liệu */
+  .table-container {
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 6px;
+  }
+  
+  /* CSS cho cột "Pile Plan" */
+  .table-container .ant-table-column-title {
+    font-weight: 600;
+  }
+  
