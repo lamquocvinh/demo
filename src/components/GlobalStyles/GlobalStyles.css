@@ -1,14 +1,14 @@
-@layer base {
-  body {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    line-height: 1;
-    text-rendering: optimizespeed;
-    height: 100%;
-    background: url("./background.svg") no-repeat center top;
-    overflow: overlay;
-  }
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-rendering: optimizespeed;
+  height: 100%;
+  background: url("./background.svg") no-repeat center top;
+  overflow: overlay;
 }
+
+
 
 .ant-btn-primary {
   color: #fff !important;
